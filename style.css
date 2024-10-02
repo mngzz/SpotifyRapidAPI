@@ -31,6 +31,10 @@ body {
   overflow-x: hidden;
 }
 
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   margin-top: 80px;
   display: flex;
@@ -183,7 +187,7 @@ body {
 }
 
 .lyrics::-webkit-scrollbar {
-  display: none; /* Hide the scrollbar */
+  display: none;
 }
 
 .lyrics p,
