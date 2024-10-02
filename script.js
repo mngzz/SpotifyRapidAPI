@@ -98,8 +98,8 @@ const optionsLyrics = {
   method: "GET",
   headers: {
     // Get another key from Rapid if the API is not loading
-    // "x-rapidapi-key": "971db6bb98msh4f459aac0462b7bp16f6a9jsn9339cff15cca",
-    // "x-rapidapi-host": "genius-song-lyrics1.p.rapidapi.com",
+    "x-rapidapi-key": "971db6bb98msh4f459aac0462b7bp16f6a9jsn9339cff15cca",
+    "x-rapidapi-host": "genius-song-lyrics1.p.rapidapi.com",
   },
 };
 
@@ -128,8 +128,8 @@ const options = {
   method: "GET",
   headers: {
     // Get another key from Rapid if the API is not loading
-    // "x-rapidapi-key": "8ee8c0accfmshe7d3d7a3e7ed81ep1e2e81jsna6eefcbe3f9e",
-    // "x-rapidapi-host": "spotify23.p.rapidapi.com",
+    "x-rapidapi-key": "8ee8c0accfmshe7d3d7a3e7ed81ep1e2e81jsna6eefcbe3f9e",
+    "x-rapidapi-host": "spotify23.p.rapidapi.com",
   },
 };
 
