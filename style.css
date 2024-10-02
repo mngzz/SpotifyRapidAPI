@@ -8,8 +8,6 @@ body {
   background-image: url("./assets/Background.png");
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -27,6 +25,9 @@ body {
 
 .content-container {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -36,7 +37,6 @@ body {
 }
 
 .container {
-  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -45,7 +45,6 @@ body {
 #left-container {
   padding: 20px 30px;
   display: flex;
-  justify-self: start;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
@@ -236,6 +235,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   .content {
