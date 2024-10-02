@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+  background-image: url("./assets/Background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -100;
+}
+
+.content-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+#left-container {
+  padding: 20px 30px;
+  display: flex;
+  justify-self: start;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #f5f5f5bf;
+  width: 366px;
+  height: 611px;
+  border-radius: 20px;
+}
+
+.album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h2 {
+  margin-bottom: 0;
+}
+
+.title p {
+  margin-top: 10px;
+}
+
+.timeRange {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(#92375a, #68265c);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pauseIcon {
+  position: relative;
+  left: 5px;
+  display: none;
+}
+
+.sideButton {
+  filter: drop-shadow(0px 0px 12px grey);
+}
+
+.button {
+  cursor: pointer;
+}
+
+#audioProgress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #ffffff80;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#audioProgress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  margin: 0px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  border: 5px solid #56255c;
+}
+
+/*************Right Container***************/
+
+#right-container {
+  height: 611px;
+  display: none;
+}
+
+#right-container h1 {
+  margin: 5px 0 40px 0;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.menu button {
+  border: 0;
+  background-color: transparent;
+  color: #ffffff80;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+}
+
+.menu button:hover,
+.menu button:active,
+.menu button.active {
+  color: #ffffff;
+}
+
+.content {
+  height: 536px;
+  width: 771px;
+}
+
+/******Lyrics Section*******/
+
+.lyrics {
+  --scrollbar-width: 10px;
+  --mask-height: 80px;
+  overflow-y: auto;
+  height: 450px;
+  padding-bottom: var(--mask-height);
+  padding-right: 20px;
+  --mask-image-content: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--mask-height),
+    black calc(100% - var(--mask-height)),
+    transparent
+  );
+  --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+  --mask-image-scrollbar: linear-gradient(black, black);
+  --mask-size-scrollbar: var(--scrollbar-width) 100%;
+  mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+  mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+  mask-position: 0 0, 100% 0;
+  mask-repeat: no-repeat, no-repeat;
+}
+
+.lyrics::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+.lyrics p,
+.lyrics a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/******Other Artists Section*******/
+.other-albums,
+.related-artists {
+  width: 771px;
+  height: 536px;
+}
+
+.album-container,
+.artist-container {
+  width: 290px;
+  height: 353px;
+  margin-top: 40px;
+}
+
+.img-album img,
+.img-artist img {
+  height: 290px;
+  width: 290px;
+  cursor: pointer;
+}
+
+.album-title p,
+.album-artist p,
+.album-date p,
+.artist p {
+  color: #ffffff99;
+  font-size: 16px;
+  margin: 0px;
+}
+/******Related Artists Section*******/
+
+/************************Responsive Section**************************/
+
+@media (min-width: 481px) and (max-width: 1000px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    height: 536px;
+    width: 450px;
+  }
+}
